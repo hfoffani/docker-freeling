@@ -8,7 +8,7 @@ On debian jessy 64
 
     docker build -t herchu/freeling4:v0 .
 
-    docker run -t -i herchu/freeling4:v0 /bin/bash
+    echo "Mi casa es bonita." | docker run -i herchu/freeling4:v0 /usr/bin/analyze -f es.cfg
 
 
 Debian Package
