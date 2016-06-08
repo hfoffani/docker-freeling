@@ -14,10 +14,11 @@ RUN apt-get update -qq && apt-get install -y -qq \
     libboost-thread-dev \
     libboost-filesystem-dev
 
-ADD https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb
+# ADD https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb freeling-4.0.deb
+ADD freeling-4.0-jessie-amd64.deb freeling-4.0.deb
 
-RUN dpkg -i freeling-4.0-jessie-amd64.deb \
-    && rm freeling-4.0-jessie-amd64.deb
+RUN dpkg -i freeling-4.0.deb \
+    && rm freeling-4.0.deb
 
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 RUN dpkg-reconfigure --frontend=noninteractive locales
