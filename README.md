@@ -22,5 +22,7 @@ The Freeling Debian packages is:
 To Do
 -----
 
+Publish
+
 Reduce footprint
 
