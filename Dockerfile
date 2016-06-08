@@ -14,10 +14,10 @@ RUN apt-get update -qq && apt-get install -y -qq \
     libboost-thread-dev \
     libboost-filesystem-dev
 
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
-RUN dpkg-reconfigure --frontend=noninteractive locales
-RUN locale-gen en_US.UTF-8
-RUN /usr/sbin/update-locale LANG=en_US.UTF-8
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
+    dpkg-reconfigure --frontend=noninteractive locales && \
+    locale-gen en_US.UTF-8 && \
+    /usr/sbin/update-locale LANG=en_US.UTF-8
 
 ENV LC_ALL en_US.UTF-8
 
