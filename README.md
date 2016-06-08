@@ -17,3 +17,10 @@ Debian Package
 The Freeling Debian packages is:
 
     https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb
+
+
+To Do
+-----
+
+Reduce footprint
+
