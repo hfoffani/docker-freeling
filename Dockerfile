@@ -21,8 +21,8 @@ RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
 
 ENV LC_ALL en_US.UTF-8
 
-# ADD https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb freeling-4.0.deb
-ADD freeling-4.0-jessie-amd64.deb freeling-4.0.deb
+# ADD https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb freeling4.deb
+ADD freeling-4.0-jessie-amd64.deb freeling4.deb
 
-RUN dpkg -i freeling-4.0.deb \
-    && rm freeling-4.0.deb
+RUN dpkg -i freeling4.deb \
+    && rm freeling4.deb
