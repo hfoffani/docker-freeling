@@ -25,4 +25,5 @@ To Do
 Publish
 
 Reduce footprint
-
+    Using docker-squash
+    docker save 7c0a6a6f5732 | PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH" sudo docker-squash -t herchu/freeling4:pub | docker load
