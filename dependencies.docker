@@ -1,0 +1,11 @@
+
+RUN apt-get update -qq && apt-get install -y -qq \
+    locales \
+    libboost-regex-dev \
+    libicu-dev \
+    zlib1g-dev \
+    libboost-system-dev \
+    libboost-program-options-dev \
+    libboost-thread-dev \
+    libboost-filesystem-dev
+

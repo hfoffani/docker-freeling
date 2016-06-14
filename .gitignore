@@ -1,2 +1,5 @@
 *.deb
-
+Dockerfile*
+*.swp
+build-??
+squash-??

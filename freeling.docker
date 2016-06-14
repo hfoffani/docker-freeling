@@ -1,0 +1,6 @@
+# For building test you can use a local .deb package.
+ADD https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb freeling4.deb
+# ADD freeling-4.0-jessie-amd64.deb freeling4.deb
+
+RUN dpkg -i freeling4.deb \
+    && rm freeling4.deb
