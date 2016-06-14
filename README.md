@@ -3,9 +3,14 @@
 Docker Image at the Hub
 ------------
 
-Fetch the public image from
+Fetch the public image with
 
     docker pull herchu/freeling4-es
+
+
+Test it with
+
+    echo "Mi casa es bonita." | docker run -i herchu/freeling4-es:pub /usr/bin/analyze -f es.cfg
 
 
 
@@ -21,11 +26,11 @@ Besides docker the procedures depends on
 Squashing the image requires your local root password.
 
 
-The underline OS of this image is Debian jessy 64
+The underline OS of this image is Debian jessy 64.
+If you want to build your image by yourself use:
 
+    make build-es
     make squash-es
-
-    echo "Mi casa es bonita." | docker run -i herchu/freeling4-es:pub /usr/bin/analyze -f es.cfg
 
 
 
