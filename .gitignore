@@ -1,4 +1,5 @@
 *.deb
 Dockerfile*
-*image
 *.swp
+build-??
+squash-??
