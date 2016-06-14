@@ -1,3 +1,4 @@
 *.deb
-Dockerfile
+Dockerfile*
 *image
+*.swp
