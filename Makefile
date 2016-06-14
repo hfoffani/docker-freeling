@@ -18,3 +18,6 @@ squash-es: build-es
 	PATH=$(MPATH) sudo docker-squash -t $(IMAGE)-es:$(PUBLITAG) |  \
 	docker load
 	touch squash-es
+
+publish-es: squash-es
+	docker push $(IMAGE)-es:$(PUBLITAG)

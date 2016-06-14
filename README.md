@@ -1,5 +1,14 @@
 
 
+Docker Image at the Hub
+------------
+
+Fetch the public image from
+
+    docker pull herchu/freeling4-es:pub
+
+
+
 Freeling Docker Image
 ---------------
 
@@ -28,8 +37,4 @@ The Freeling Debian packages is:
     https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb
 
 
-To Do
------
-
-Publish
 
