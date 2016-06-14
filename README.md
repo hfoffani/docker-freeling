@@ -4,11 +4,20 @@ Freeling Docker Image
 ---------------
 
 
-On an debian jessy 64 image
+Besides docker the procedures depends on
+- m4 (probably it's already installed)
+- docker-squash
+- tar GNU compatible
 
-    make build
+Squashing the image requires your local root password.
 
-    echo "Mi casa es bonita." | docker run -i herchu/freeling4:v0 /usr/bin/analyze -f es.cfg
+
+The underline OS of this image is Debian jessy 64
+
+    make squash-es
+
+    echo "Mi casa es bonita." | docker run -i herchu/freeling4-es:pub /usr/bin/analyze -f es.cfg
+
 
 
 Debian Package
@@ -24,6 +33,3 @@ To Do
 
 Publish
 
-Reduce footprint
-    Using docker-squash and gnu-tar
-    docker save 7c0a6a6f5732 | PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH" sudo docker-squash -t herchu/freeling4:pub | docker load
