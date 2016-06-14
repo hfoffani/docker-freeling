@@ -5,7 +5,7 @@ Docker Image at the Hub
 
 Fetch the public image from
 
-    docker pull herchu/freeling4-es:pub
+    docker pull herchu/freeling4-es
 
 
 
