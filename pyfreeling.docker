@@ -3,5 +3,8 @@
 COPY APIs/ /home/APIs
 
 RUN cd /home/APIs/python && \
+    sed -e 's=/usr/local=/usr=' \
+        -e 's=\["es"."ca"."en"."it"]=["es"]=' \
+        -i sample.py && \
     make
 
