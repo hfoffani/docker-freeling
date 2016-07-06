@@ -48,3 +48,6 @@ API for Python
     svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/python APIs/python
     svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/common APIs/common
 
+
+    echo "Mi casa es bonita." | docker run -i herchu/freeling4-pyes:v0 python3 /home/APIs/python/sample.py
+
