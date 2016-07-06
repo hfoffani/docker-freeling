@@ -8,4 +8,6 @@ include(dependencies.docker)
 include(locale.docker)
 include(freeling.docker)
 
+ifdef(py-dv, include(python.docker))
+
 ifdef(fl-es, include(es-config.docker))
