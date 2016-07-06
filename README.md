@@ -45,5 +45,6 @@ The Freeling Debian packages is:
 
 API for Python
 --------------
-    svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/python APIpython
+    svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/python APIs/python
+    svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/common APIs/common
 

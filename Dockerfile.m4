@@ -11,3 +11,5 @@ ifdef(py-dv, include(python.docker))
 
 include(freeling.docker)
 ifdef(fl-es, include(es-config.docker))
+
+ifdef(py-dv, include(pyfreeling.docker))

@@ -1,0 +1,7 @@
+
+
+COPY APIs/ /home/APIs
+
+RUN cd /home/APIs/python && \
+    make
+
