@@ -21,9 +21,10 @@ build-pyes: Dockerfile-pyes
 	docker build -t $(IMAGE)-pyes:$(BUILDTAG) -f Dockerfile-pyes .
 	touch build-pyes
 
-IMAGEID := $(shell docker images -q $(IMAGE)-es:$(BUILDTAG))
 
+## because docker-squash must run as root it asks its password
 squash-es: build-es
+	$(eval IMAGEID = $(shell docker images -q $(IMAGE)-es:$(BUILDTAG))) \
 	docker save $(IMAGEID) | \
 	PATH=$(MPATH) sudo docker-squash -t $(IMAGE)-es:$(PUBLITAG) |  \
 	docker load
