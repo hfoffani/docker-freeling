@@ -5,21 +5,15 @@ BUILDTAG=v0
 PUBLITAG=pub
 DOCKERCFG=dependencies.docker freeling.docker locale.docker
 
-Dockerfile-es: Dockerfile.m4 $(DOCKERCFG) es-config.docker
-	m4 --define=fl-es Dockerfile.m4 > Dockerfile-es
 
-Dockerfile-pyes: Dockerfile.m4 $(DOCKERCFG) python.docker pyfreeling.docker
+Dockerfile-es: Dockerfile.m4 $(DOCKERCFG) python.docker pyfreeling.docker es-config.docker
 	svn export --force -q https://github.com/TALP-UPC/FreeLing.git/tags/4.0-beta1/APIs/python APIs/python
 	svn export --force -q https://github.com/TALP-UPC/FreeLing.git/tags/4.0-beta1/APIs/common APIs/common
-	m4 --define=py-dv --define=fl-es Dockerfile.m4 > Dockerfile-pyes
+	m4 --define=py-dv --define=fl-es Dockerfile.m4 > Dockerfile-es
 
 build-es: Dockerfile-es
 	docker build -t $(IMAGE)-es:$(BUILDTAG) -f Dockerfile-es .
 	touch build-es
-
-build-pyes: Dockerfile-pyes
-	docker build -t $(IMAGE)-pyes:$(BUILDTAG) -f Dockerfile-pyes .
-	touch build-pyes
 
 
 ## because docker-squash must run as root it asks its password
