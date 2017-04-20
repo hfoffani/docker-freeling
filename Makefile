@@ -16,6 +16,10 @@ build-es: Dockerfile-es
 	touch build-es
 
 
+clean:
+	rm -f Dockerfile-es build-es squash-es
+
+
 ## because docker-squash must run as root it asks its password
 squash-es: build-es
 	$(eval IMAGEID = $(shell docker images -q $(IMAGE)-es:$(BUILDTAG))) \
