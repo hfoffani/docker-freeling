@@ -9,8 +9,8 @@ Dockerfile-es: Dockerfile.m4 $(DOCKERCFG) es-config.docker
 	m4 --define=fl-es Dockerfile.m4 > Dockerfile-es
 
 Dockerfile-pyes: Dockerfile.m4 $(DOCKERCFG) python.docker pyfreeling.docker
-	svn export --force -q https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/python APIs/python
-	svn export --force -q https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/common APIs/common
+	svn export --force -q https://github.com/TALP-UPC/FreeLing.git/tags/4.0-beta1/APIs/python APIs/python
+	svn export --force -q https://github.com/TALP-UPC/FreeLing.git/tags/4.0-beta1/APIs/common APIs/common
 	m4 --define=py-dv --define=fl-es Dockerfile.m4 > Dockerfile-pyes
 
 build-es: Dockerfile-es
