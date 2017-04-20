@@ -13,6 +13,11 @@ Test it with
     echo "Mi casa es bonita." | docker run -i herchu/freeling4-es:pub /usr/bin/analyze -f es.cfg
 
 
+There is also a Python API. Test it with
+
+    echo "Mi casa es bonita." | docker run -i herchu/freeling4-pyes:v0 python3 /home/APIs/python/sample.py
+
+
 
 Freeling Docker Image
 ---------------
@@ -41,13 +46,4 @@ The Freeling Debian packages is:
 
     https://github.com/TALP-UPC/FreeLing/releases/download/4.0/freeling-4.0-jessie-amd64.deb
 
-
-
-API for Python
---------------
-    svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/python APIs/python
-    svn export https://github.com/TALP-UPC/FreeLing.git/trunk/APIs/common APIs/common
-
-
-    echo "Mi casa es bonita." | docker run -i herchu/freeling4-pyes:v0 python3 /home/APIs/python/sample.py
 
